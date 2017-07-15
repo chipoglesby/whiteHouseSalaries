@@ -92,4 +92,9 @@ As it's noted in Wikipedia, each president gets to choose their own cabinet, whi
 | croley, steven p     |  135000| special assistant to the president and senior counsel to the president       |  2012| employee | obama     |
 | kang, christopher d  |  135000| special assistant to the president and senior counsel to the president       |  2012| employee | obama     |
 
-Also of note, Assistants, Special Assistants and Deputy Assistants all indicate different roles within office tiers.
+Also of note: \* Assistants \* Special Assistants \* Deputy Assistants all indicate different roles within office tiers.
+
+Median Salary Over Time
+=======================
+
+![](../analysis/firstTerm_files/figure-markdown_github-ascii_identifiers/medianSalaryChart-1.png)
