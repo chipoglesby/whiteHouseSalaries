@@ -125,5 +125,6 @@ salaries %>%
   ggplot(aes(year, medianSalary, fill = president)) +
   geom_bar(stat = "identity") +
   ggtitle("Median Salary Year Over Year") +
-  scale_x_continuous(breaks = c(2001:as.numeric(format(Sys.Date(), "%Y"))))
+  scale_x_continuous(breaks = c(2001:as.numeric(format(Sys.Date(), "%Y")))) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```

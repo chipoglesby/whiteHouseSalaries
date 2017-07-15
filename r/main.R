@@ -23,3 +23,4 @@ source("code/plots/plots.R")
 # ---- render ----
 # Step Four: Knitting Report
 rmarkdown::render("rmd/firstTerm.Rmd","github_document", "../analysis/firstTerm.md")
+rmarkdown::render("rmd/staffTermLength.Rmd","github_document", "../analysis/staffTermLength.md")
