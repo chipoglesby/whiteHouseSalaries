@@ -2,6 +2,7 @@
 
 An exploratory data analysis of White House Salaries between 2001 and 2017.
 
-1. The first part of the analysis can be read here: [First Term Analysis](r/analysis/firstTerm.md)
-2. Staff Position Analysis - coming soon!
-3. Gender Pay Gap Analysis - coming soon!
+1. First Term Analyis: [First Term Analysis](r/analysis/firstTerm.md)
+1. Staff Term Analysis: [Staff Term Analysis](r/analysis/staffTerm.md)
+1. Staff Position Analysis - coming soon!
+1. Gender Pay Gap Analysis - coming soon!
