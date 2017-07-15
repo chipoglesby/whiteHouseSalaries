@@ -1,18 +1,19 @@
-Presidential First Term Analysis
+Presidential First Term Analysis of Salaries
 ================
+07-15-2017
 
-Comparing Pay Among First-term Presidents
------------------------------------------
+Comparing Median Salary Among First-term Presidential Staff
+-----------------------------------------------------------
 
-Recently the Trump Administration released it's first report of what they pay their staff. I thought it would be interesting to do an analysis that compares it to past EOP offices.
+Recently the Trump Administration released the first report of staff salaries. I thought it would be interesting to do an analysis that compares it to past EOP offices.
 
 For this analysis, we are going to look at the first year of Presidents Trump, Obama and Bush.
 
-| president |  salary|
-|:----------|-------:|
-| bush      |   49789|
-| obama     |   65000|
-| trump     |   89000|
+| president |  medianSalary|
+|:----------|-------------:|
+| bush      |         49789|
+| obama     |         65000|
+| trump     |         89000|
 
 Here we see that Trump's median salary of 89000 is greater than both former president Bush and Obama.
 
@@ -35,13 +36,13 @@ Staff Sizes
 
 Let's take a look at staff sizes and salaries over time:
 
-|  year| president | party      | term  |  medianSalary|  meanSalary|  staffSize|
-|-----:|:----------|:-----------|:------|-------------:|-----------:|----------:|
-|  2001| bush      | republican | first |         49789|    58042.17|        397|
-|  2009| obama     | democrat   | first |         65000|    80384.44|        487|
-|  2017| trump     | republican | first |         89000|    94872.00|        377|
+|  year| president | party      | term  |  medianSalary|  meanSalary|  staffSize|     total|
+|-----:|:----------|:-----------|:------|-------------:|-----------:|----------:|---------:|
+|  2001| bush      | republican | first |         49789|    58042.17|        397|  23042741|
+|  2009| obama     | democrat   | first |         65000|    80384.44|        487|  39147222|
+|  2017| trump     | republican | first |         89000|    94872.00|        377|  35766744|
 
-Here it appears that President Trump is spending more per staff over all, but with a smaller staff size. This could be problematic for the president in the long run.
+Here it appears that President Trump is spending more per staff over all, but with a smaller staff size.
 
 So who are these top paid staff members of Trump's administration?
 
@@ -91,4 +92,9 @@ As it's noted in Wikipedia, each president gets to choose their own cabinet, whi
 | croley, steven p     |  135000| special assistant to the president and senior counsel to the president       |  2012| employee | obama     |
 | kang, christopher d  |  135000| special assistant to the president and senior counsel to the president       |  2012| employee | obama     |
 
-Also of note, Assistants, Special Assistants and Deputy Assistants all indicate different roles within office tiers.
+Also of note: \* Assistants \* Special Assistants \* Deputy Assistants all indicate different roles within office tiers.
+
+Median Salary Over Time
+=======================
+
+![](../analysis/firstTerm_files/figure-markdown_github-ascii_identifiers/medianSalaryChart-1.png)
