@@ -56,7 +56,7 @@ yearCount %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
-## Longest Employeed Staff
+## Longest Employed Staff
 
 One interesting nugget of data that I've found during my analysis
 is that some staffers have worked as many as 
@@ -90,7 +90,7 @@ longestStaff %>%
 ## Visualizing Employee Tenure
 
 It would be interesting to know if those `r nrow(longestStaff)` are
-compenstated properly for their tenure while working at The White House?
+compensatated properly for their tenure while working at The White House?
 
 ```{r, staffPlots, echo = FALSE}
 # Plots for Longest Employeed Staff

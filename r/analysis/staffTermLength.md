@@ -29,8 +29,8 @@ Next, let's take at look at the top positions with the highest turnover. These p
 
 ![](../analysis/staffTermLength_files/figure-markdown_github-ascii_identifiers/staffTurnOver-1.png)
 
-Longest Employeed Staff
------------------------
+Longest Employed Staff
+----------------------
 
 One interesting nugget of data that I've found during my analysis is that some staffers have worked as many as 16 years in the White House. I thought it would be interesting to look more at these people and staff overall.
 
@@ -236,6 +236,6 @@ Let's take a deeper dive into the data:
 Visualizing Employee Tenure
 ---------------------------
 
-It would be interesting to know if those 11 are compenstated properly for their tenure while working at The White House?
+It would be interesting to know if those 11 are compensatated properly for their tenure while working at The White House?
 
 ![](../analysis/staffTermLength_files/figure-markdown_github-ascii_identifiers/staffPlots-1.png)![](../analysis/staffTermLength_files/figure-markdown_github-ascii_identifiers/staffPlots-2.png)![](../analysis/staffTermLength_files/figure-markdown_github-ascii_identifiers/staffPlots-3.png)![](../analysis/staffTermLength_files/figure-markdown_github-ascii_identifiers/staffPlots-4.png)![](../analysis/staffTermLength_files/figure-markdown_github-ascii_identifiers/staffPlots-5.png)![](../analysis/staffTermLength_files/figure-markdown_github-ascii_identifiers/staffPlots-6.png)![](../analysis/staffTermLength_files/figure-markdown_github-ascii_identifiers/staffPlots-7.png)![](../analysis/staffTermLength_files/figure-markdown_github-ascii_identifiers/staffPlots-8.png)![](../analysis/staffTermLength_files/figure-markdown_github-ascii_identifiers/staffPlots-9.png)![](../analysis/staffTermLength_files/figure-markdown_github-ascii_identifiers/staffPlots-10.png)![](../analysis/staffTermLength_files/figure-markdown_github-ascii_identifiers/staffPlots-11.png)
