@@ -25,7 +25,7 @@ Trump, Obama and Bush.
 salaries %>% 
   group_by(president) %>% 
   filter(grepl("2001|2009|2017", year)) %>% 
-  summarize(salary = median(salary)) %>% 
+  summarize(medianSalary = median(salary)) %>% 
   knitr::kable()
 ```
 
@@ -74,14 +74,13 @@ salaries %>%
   group_by(year, president, party, term) %>% 
   summarize(medianSalary = median(salary),
             meanSalary = mean(salary),
-            staffSize = n()) %>% 
+            staffSize = n(),
+            total = sum(salary)) %>% 
   knitr::kable()
 ```
 
 Here it appears that President Trump is spending more per staff over all,
-but with a smaller staff size. This could be problematic for the president
-in the long run.
-
+but with a smaller staff size.
 
 So who are these top paid staff members of Trump's administration?
 
