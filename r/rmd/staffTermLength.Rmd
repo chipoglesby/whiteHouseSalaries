@@ -1,0 +1,107 @@
+---
+title: "Staff Term Length"
+date: '`r format(Sys.Date(), "%m-%d-%Y")`'
+output: 
+  github_document:
+    html_preview: FALSE
+  pdf_document:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(magrittr)
+library(knitr)
+options(digits = 15)
+library(scales)
+```
+
+## How long does the average employee stay on staff?
+
+Let's start by looking at the average employee length of stay between
+`r min(salaries$year)` and `r max(salaries$year)`.
+ 
+```{r, averageStay, echo = FALSE}
+yearCount %>% 
+  ggplot() +
+  geom_histogram(aes(years), bins = 50)
+```
+
+It looks like the majority of employees will only work one year and there
+also appears to be a handful who have worked as many as 
+`r max(longestStaff$years)` years. We'll investigate that later.
+
+Next, let's take at look at the top positions with the highest turnover.
+These positions have the highest count of employees who only
+work one year.
+
+```{r, staffTurnOver, echo = FALSE}
+yearCount %>% 
+  filter(years == 1) %>% 
+  inner_join(salaries, 'employee_name') %>% 
+  group_by(position) %>% 
+  summarize(count = n()) %>%
+  arrange(desc(count)) %>% 
+  top_n(10, count) %>% kable()
+
+yearCount %>% 
+  filter(years == 1) %>% 
+  inner_join(salaries, 'employee_name') %>% 
+  group_by(position) %>% 
+  summarize(count = n()) %>%
+  arrange(desc(count)) %>% 
+  top_n(10, count) %>% 
+  ggplot(aes(position, count)) +
+  geom_bar(stat = 'identity') +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## Longest Employed Staff
+
+One interesting nugget of data that I've found during my analysis
+is that some staffers have worked as many as 
+`r max(longestStaff$years)` years in the White House. I thought
+it would be interesting to look more at these people and staff 
+overall.
+
+Here I am going to make the assumption that the people listed
+below are the same people, because they've held the same or similiar
+positions over time.
+
+```{r, staffTable, echo = FALSE}
+longestStaff %>% 
+  kable()
+```
+
+That's interesting, right? `r nrow(longestStaff)` people have been working in
+The White House for `r max(longestStaff$years)` years now. I wonder
+what they do there?
+
+Let's take a deeper dive into the data:
+
+```{r, deepDive, echo = FALSE}
+longestStaff %>% 
+  inner_join(salaries, "employee_name") %>% 
+  select(employee_name, year, position, president) %>% 
+  arrange(employee_name, year) %>% 
+  kable()
+```
+
+## Visualizing Employee Tenure
+
+It would be interesting to know if those `r nrow(longestStaff)` are
+compensatated properly for their tenure while working at The White House?
+
+```{r, staffPlots, echo = FALSE}
+# Plots for Longest Employeed Staff
+for (i in 1:length(longestStaff$employee_name)) {
+  print(salaries %>% 
+          filter(grepl(longestStaff$employee_name[[i]], employee_name)) %>% 
+          ggplot(aes(year, salary)) +
+          geom_line(size = 1.5) +
+          ggtitle(tools::toTitleCase(longestStaff$employee_name[[i]])) +
+          scale_y_continuous(labels = comma) +
+          scale_x_continuous(breaks = c(2001:as.numeric(format(Sys.Date(), "%Y")))) +
+          theme(axis.text.x = element_text(angle = 45, hjust = 1)))
+}
+```
