@@ -121,7 +121,7 @@ all indicate different roles within office tiers.
 salaries %>% 
   group_by(year, president) %>% 
   summarize(medianSalary = median(salary)) %>% 
-  ggplot(aes(year, medianSalary, color = president)) +
+  ggplot(aes(year, medianSalary, fill = president)) +
   geom_bar(stat = "identity") +
   ggtitle("Median Salary Year Over Year") +
   scale_x_continuous(breaks = c(2001:as.numeric(format(Sys.Date(), "%Y"))))
