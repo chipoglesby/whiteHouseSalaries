@@ -29,7 +29,7 @@ salaries %>%
   knitr::kable()
 ```
 
-`r ifelse(median(salaries$salary[salaries$year == 2017]) > median(salaries$salary[salaries$year == 2009]), paste("Here we see that Trump's median salary of", median(salaries$salary[salaries$year == 2017]), "is greater than both former president Bush and Obama.", sep = " "), aste("Here we see that Trump's median salary of", median(salaries$salary[salaries$year == 2017]), "is less than both former president Bush and Obama.", sep = " "))`
+`r ifelse(median(salaries$salary[salaries$year == 2017]) > median(salaries$salary[salaries$year == 2009]), paste("Here we see that Trump's median salary of", median(salaries$salary[salaries$year == 2017]), "is greater than both former president Bush and Obama.", sep = " "), paste("Here we see that Trump's median salary of", median(salaries$salary[salaries$year == 2017]), "is less than both former president Bush and Obama.", sep = " "))`
 
 That could be expected as wages should increase with cost of living over time.
 
@@ -79,8 +79,9 @@ salaries %>%
   knitr::kable()
 ```
 
-Here it appears that President Trump is spending more per staff over all,
-but with a smaller staff size.
+Here it appears that President Trump is spending more per individual staff
+member but with a smaller staff size. In terms of total staff salary,
+President Obama did spend more during his first presidential term.
 
 So who are these top paid staff members of Trump's administration?
 

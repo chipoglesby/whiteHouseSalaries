@@ -42,7 +42,7 @@ Let's take a look at staff sizes and salaries over time:
 |  2009| obama     | democrat   | first |         65000|    80384.44|        487|  39147222|
 |  2017| trump     | republican | first |         89000|    94872.00|        377|  35766744|
 
-Here it appears that President Trump is spending more per staff over all, but with a smaller staff size.
+Here it appears that President Trump is spending more per individual staff member but with a smaller staff size. In terms of total staff salary, President Obama did spend more during his first presidential term.
 
 So who are these top paid staff members of Trump's administration?
 
