@@ -1,0 +1,53 @@
+---
+title: "White House Salary Gender Analysis"
+date: '`r format(Sys.Date(), "%m-%d-%Y")`'
+output: 
+  github_document:
+    html_preview: FALSE
+  pdf_document:
+    toc: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Comparing Salaries between male and female White House Staff Members
+
+[American Progress Analysis](https://www.americanprogress.org/issues/economy/reports/2014/05/19/90039/explaining-the-gender-wage-gap/)
+
+Recently I thought it would be interesting to see if men and women in
+The White House receive equal pay and what those trends are over time.
+
+For this analysis, I'll be relying heavily on the `gender` package in R
+to assume the gender identity of each name based on the dataset provided.
+
+I have not taken the time to spot check each time, but if you're
+interested in team up and tackling it, 
+[please let me know](http://www.twitter.com/chipoglesby)!
+
+First let's simply start with visualizing pay between gender over time:
+
+```{r genderLineChart, echo = FALSE, warnings = FALSE}
+salaries %>% 
+  filter(status == 'employee') %>% 
+  group_by(year, gender) %>%
+  summarize(medianSalary = median(salary)) %>% 
+  ggplot(aes(year, medianSalary, color = gender)) +
+  geom_line(size = 1.5) +
+  scale_x_continuous(breaks = c(2001:as.numeric(format(Sys.Date(), "%Y")))) +
+  ggtitle("Median Pay Over Time")
+```
+
+As we've seen in earlier in my first analysis, median salaries are on
+the rise year over year.
+
+```{r genderBoxplot, echo = FALSE, warnings = FALSE}
+salaries %>% 
+  filter(status == 'employee') %>% 
+  group_by(gender) %>% 
+  ggplot(aes(gender, salary, fill = gender)) +
+  geom_boxplot() +
+  ggtitle('Boxplot: Salaries of Men vs Women') +
+  facet_wrap(~year)
+```

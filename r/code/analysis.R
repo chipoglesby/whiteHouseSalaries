@@ -56,16 +56,3 @@ counselToPresident <- salaries %>%
   group_by(year) %>% 
   summarize(count = n()) %>% 
   arrange(year)
-
-## Gender Analysis
-salaries %>% 
-  filter(status == 'employee') %$% 
-  t.test(salary[gender == 'male'], salary[gender == 'female'])
-
-wageGap <- salaries %>% 
-  group_by(year) %>% 
-  summarize(wageGap = 
-              round(((median(salary[gender == 'female'])/40) /
-                       (median(salary[gender == 'male'])/40) * 100), 2),
-            mensMedianSalary = median(salary[gender == 'male']),
-            womensMedianSalary = median(salary[gender == 'female']))
