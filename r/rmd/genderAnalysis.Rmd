@@ -23,7 +23,7 @@ For this analysis, I'll be relying heavily on the `gender` package in R
 to assume the gender identity of each name based on the dataset provided.
 
 I have not taken the time to spot check each time, but if you're
-interested in team up and tackling it, 
+interested in teaming up and tackling it, 
 [please let me know](http://www.twitter.com/chipoglesby)!
 
 First let's simply start with visualizing pay between gender over time:

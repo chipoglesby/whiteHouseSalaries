@@ -1,6 +1,6 @@
 Presidential First Term Analysis of Salaries
 ================
-07-15-2017
+08-09-2017
 
 Comparing Median Salary Among First-term Presidential Staff
 -----------------------------------------------------------
@@ -36,11 +36,11 @@ Staff Sizes
 
 Let's take a look at staff sizes and salaries over time:
 
-|  year| president | party      | term  |  medianSalary|        meanSalary|  staffSize|     total|
-|-----:|:----------|:-----------|:------|-------------:|-----------------:|----------:|---------:|
-|  2001| bush      | republican | first |         49789|  58042.1687657431|        397|  23042741|
-|  2009| obama     | democrat   | first |         65000|  80384.4394250513|        487|  39147222|
-|  2017| trump     | republican | first |         89000|  94872.0000000000|        377|  35766744|
+|  year| president | party      | term  |  medianSalary|  meanSalary|  staffSize|     total|
+|-----:|:----------|:-----------|:------|-------------:|-----------:|----------:|---------:|
+|  2001| bush      | republican | first |         49789|    58042.17|        397|  23042741|
+|  2009| obama     | democrat   | first |         65000|    80384.44|        487|  39147222|
+|  2017| trump     | republican | first |         89000|    94872.00|        377|  35766744|
 
 Here it appears that President Trump is spending more per individual staff member but with a smaller staff size. In terms of total staff salary, President Obama did spend more during his first presidential term.
 

@@ -15,6 +15,7 @@ source("code/load.R")
 # ---- analysis ----
 # Step Two: Analyzing data for report:
 source("code/analysis.R")
+source("code/genderAnalysis.R")
 
 # ---- plot ----
 # Step Three: Analyzing data for report:
