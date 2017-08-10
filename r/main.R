@@ -15,6 +15,7 @@ source("code/load.R")
 # ---- analysis ----
 # Step Two: Analyzing data for report:
 source("code/analysis.R")
+source("code/genderAnalysis.R")
 
 # ---- plot ----
 # Step Three: Analyzing data for report:
@@ -24,3 +25,4 @@ source("code/plots/plots.R")
 # Step Four: Knitting Report
 rmarkdown::render("rmd/firstTerm.Rmd","github_document", "../analysis/firstTerm.md")
 rmarkdown::render("rmd/staffTermLength.Rmd","github_document", "../analysis/staffTermLength.md")
+rmarkdown::render("rmd/genderAnalysis.Rmd","github_document", "../analysis/genderAnalysis.md")
